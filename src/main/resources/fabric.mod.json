@@ -1,0 +1,25 @@
+{
+	"schemaVersion": 1,
+	"id": "mc_modern_netty",
+	"version": "${version}",
+	"name": "Modern Netty",
+	"description": "Makes Minecraft use a newer version of Netty for compatibility for newer versions of Java.",
+	"authors": [
+		"icanttellyou"
+	],
+	"license": "LGPL-3.0-only",
+	"environment": "*",
+	"entrypoints": {
+		"init": [
+      "me.icanttellyou.mcmodernnetty.ModernNettyMod"
+		]
+	},
+	"mixins": [
+    "mcModernNetty.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.8",
+		"osl-entrypoints": ">=0.4.0"
+	}
+}
