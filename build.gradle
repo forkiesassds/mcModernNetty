@@ -1,7 +1,7 @@
 plugins {
 	id 'maven-publish'
-	id 'fabric-loom' version '1.6-SNAPSHOT'
-	id 'ploceus' version '1.6-SNAPSHOT'
+	id 'fabric-loom' version '1.10-SNAPSHOT'
+	id 'ploceus' version '1.10-SNAPSHOT'
 }
 
 base {
@@ -24,9 +24,6 @@ dependencies {
 
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-	//Mojang's modifcations to Netty required for server blacklist to function
-	include implementation("com.mojang:netty:1.9")
-
 	//Base Netty
 	include implementation("io.netty:netty-buffer:${project.netty_version}")
 	include runtimeOnly("io.netty:netty-codec:${project.netty_version}")
@@ -39,7 +36,6 @@ dependencies {
 	include runtimeOnly("io.netty:netty-transport-native-unix-common:${project.netty_version}")
 	include runtimeOnly("io.netty:netty-transport:${project.netty_version}")
 
-	ploceus.addCommonLibraries()
 	ploceus.dependOsl(project.osl_version)
 }
 

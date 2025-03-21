@@ -4,8 +4,6 @@
   "package": "me.icanttellyou.mcmodernnetty.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "AbstractBootstrapAccess",
-    "BootstrapMixin",
     "PacketByteBufMixin"
   ],
   "injectors": {
